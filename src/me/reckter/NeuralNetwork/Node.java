@@ -9,8 +9,12 @@ import java.util.ArrayList;
  */
 public class Node {
 
+	//TODO the updating of each node is a fucking slow process and needs redoing.
+
 	ArrayList<Connection> inputs;
 	ArrayList<Connection> outputs;
+
+	String name;
 
 	public Node(double threshold) {
 		inputs = new ArrayList<Connection>();

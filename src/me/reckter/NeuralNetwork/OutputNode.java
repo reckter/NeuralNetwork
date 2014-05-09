@@ -10,12 +10,15 @@ public abstract class OutputNode extends Node {
 		super(threshold);
 	}
 
+	public double output;
+	public double outputShouldBe;
+
 	public abstract void onOutput(double value);
 
 	@Override
 	public double getOutput() {
-		double ret = super.getOutput();
-		onOutput(ret);
-		return ret;
+		output = super.getOutput();
+		onOutput(output);
+		return output;
 	}
 }
